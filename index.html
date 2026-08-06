@@ -1,1 +1,145 @@
-<h1>Hello Naoki! My Website is live.</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card | Naoki</title>
+    <!-- Social Media Icon များအတွက် Font Awesome ကိုချိတ်ဆက်ထားခြင်း -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e5e7eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 350px;
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            margin: 20px;
+        }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0ea5e9; /* ပုံဘေးက အပြာရောင်ဘောင် */
+            margin-bottom: 15px;
+            padding: 3px;
+        }
+        .name {
+            font-size: 24px;
+            color: #1f2937;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .title {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 25px;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+        .contact-item:hover {
+            color: #0ea5e9;
+        }
+        .contact-item i {
+            width: 20px;
+            color: #0ea5e9;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #f3f4f6;
+            color: #374151;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 18px;
+        }
+        .social-btn:hover {
+            background: #0ea5e9;
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- ပုံထည့်ရန်နေရာ -->
+        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+        
+        <!-- နာမည်နှင့် ရာထူး -->
+        <h1 class="name">Thet Htoo Swe (Naoki)</h1>
+        <p class="title">Software Developer & Technical Specialist</p>
+        
+        <!-- ဖုန်းနှင့် အီးမေးလ် -->
+        <div class="contact-info">
+            <!-- အီးမေးလ် ပြင်ရန် -->
+            <a href="mailto:thet93330.email@gmail.com" class="contact-item">
+                <i class="fas fa-envelope"></i> thet93330@gmail.com
+            </a>
+            <!-- ဖုန်းနံပါတ် ပြင်ရန် -->
+            <a href="tel:+959755170040" class="contact-item">
+                <i class="fas fa-phone-alt"></i> +xx xxxx xxxx
+            </a>
+        </div>
+
+        <!-- Social Media လင့်ခ်များ -->
+        <div class="social-links">
+            <!-- GitHub Link -->
+            <a href="https://github.com/NaokiKun" target="_blank" class="social-btn">
+                <i class="fab fa-github"></i>
+            </a>
+            <!-- Telegram Link (t.me/yourusername ကိုပြောင်းပေးပါ) -->
+            <a href="https://t.me/ismenaoki" target="_blank" class="social-btn">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+            <!-- LinkedIn Link -->
+            <a href="#" target="_blank" class="social-btn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <!-- Facebook Link -->
+            <a href="#" target="_blank" class="social-btn">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
