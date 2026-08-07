@@ -1,1 +1,0 @@
-# naokikun.github.io
