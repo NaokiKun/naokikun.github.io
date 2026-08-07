@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card | Naoki</title>
+    <!-- Social Media Icon များအတွက် Font Awesome ကိုချိတ်ဆက်ထားခြင်း -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1929 0%, #1a2a4a 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .card {
+            background: linear-gradient(135deg, #1a2a4a 0%, #0f1f35 100%);
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 60px rgba(0, 217, 255, 0.2), 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin: 20px;
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Animated background glow */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+            animation: glow 15s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(50px, 50px); }
+        }
+        
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 15px;
+            object-fit: cover;
+            border: 3px solid #00d9ff;
+            margin-bottom: 20px;
+            padding: 2px;
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 217, 255, 0.8);
+        }
+        
+        .name {
+            font-size: 26px;
+            color: #ffffff;
+            margin-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .title {
+            font-size: 14px;
+            color: #00d9ff;
+            margin-bottom: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: #e0e7ff;
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+        }
+        
+        .contact-item:hover {
+            color: #00d9ff;
+            border: 1px solid rgba(0, 217, 255, 0.5);
+            background: rgba(0, 217, 255, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .contact-item i {
+            width: 20px;
+            color: #00d9ff;
+            font-size: 16px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .social-btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(0, 217, 255, 0.1);
+            color: #00d9ff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 18px;
+            border: 1px solid rgba(0, 217, 255, 0.3);
+        }
+        
+        .social-btn:hover {
+            background: #00d9ff;
+            color: #0a1929;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 217, 255, 0.4);
+            border: 1px solid #00d9ff;
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #00d9ff, transparent);
+            margin: 25px 0;
+        }
+        
+        .website-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: rgba(0, 217, 255, 0.15);
+            border: 1px solid #00d9ff;
+            border-radius: 8px;
+            color: #00d9ff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .website-link:hover {
+            background: #00d9ff;
+            color: #0a1929;
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.6);
+        }
+        
+        @media (max-width: 480px) {
+            .card {
+                padding: 30px 20px;
+                max-width: 100%;
+            }
+            
+            .name {
+                font-size: 22px;
+            }
+            
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-content">
+            <!-- ပုံထည့်ရန်နေရာ -->
+            <img src="/manus-storage/profile_fd8adf86.png" alt="Profile Picture" class="profile-img">
+            
+            <!-- နာမည်နှင့် ရာထူး -->
+            <h1 class="name">Thet Htoo Swe</h1>
+            <p class="title">{ Naoki }</p>
+            
+            <div class="divider"></div>
+            
+            <!-- ဖုန်းနှင့် အီးမေးလ် -->
+            <div class="contact-info">
+                <!-- အီးမေးလ် -->
+                <a href="mailto:naokikun.ygn@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i> naokikun.ygn@gmail.com
+                </a>
+                <!-- ဖုန်းနံပါတ် -->
+                <a href="tel:+959755170040" class="contact-item">
+                    <i class="fas fa-phone-alt"></i> +95 9755170040
+                </a>
+                <!-- Website -->
+                <a href="https://naokikun.github.io" target="_blank" class="contact-item">
+                    <i class="fas fa-globe"></i> naokikun.github.io
+                </a>
+            </div>
+
+            <!-- Social Media လင့်ခ်များ -->
+            <div class="social-links">
+                <!-- GitHub Link -->
+                <a href="https://github.com/NaokiKun" target="_blank" class="social-btn" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <!-- Telegram Link -->
+                <a href="https://t.me/ismenaoki" target="_blank" class="social-btn" title="Telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <!-- LinkedIn Link -->
+                <a href="#" target="_blank" class="social-btn" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- Facebook Link -->
+                <a href="#" target="_blank" class="social-btn" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+            
+            <!-- Website Link Button -->
+            <div>
+                <a href="https://naokikun.github.io" target="_blank" class="website-link">
+                    Visit Website
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
