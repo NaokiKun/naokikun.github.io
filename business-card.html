@@ -14,7 +14,7 @@
         }
         body {
             font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a1929 0%, #1a2a4a 100%);
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -22,20 +22,20 @@
             padding: 20px;
         }
         .card {
-            background: linear-gradient(135deg, #1a2a4a 0%, #0f1f35 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
             width: 100%;
             max-width: 400px;
             border-radius: 20px;
             padding: 40px 30px;
-            box-shadow: 0 20px 60px rgba(0, 217, 255, 0.2), 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
             text-align: center;
             margin: 20px;
-            border: 1px solid rgba(0, 217, 255, 0.3);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             position: relative;
             overflow: hidden;
         }
         
-        /* Animated background glow */
+        /* Subtle background effect */
         .card::before {
             content: '';
             position: absolute;
@@ -43,13 +43,13 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
-            animation: glow 15s ease-in-out infinite;
+            background: radial-gradient(circle, rgba(100, 116, 139, 0.03) 0%, transparent 70%);
+            animation: subtle-glow 20s ease-in-out infinite;
         }
         
-        @keyframes glow {
+        @keyframes subtle-glow {
             0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(50px, 50px); }
+            50% { transform: translate(30px, 30px); }
         }
         
         .card-content {
@@ -62,21 +62,21 @@
             height: 140px;
             border-radius: 15px;
             object-fit: cover;
-            border: 3px solid #00d9ff;
+            border: 3px solid #cbd5e1;
             margin-bottom: 20px;
             padding: 2px;
-            box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
-            transition: transform 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .profile-img:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(0, 217, 255, 0.8);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
         }
         
         .name {
             font-size: 26px;
-            color: #ffffff;
+            color: #1e293b;
             margin-bottom: 5px;
             font-weight: 700;
             letter-spacing: 0.5px;
@@ -84,7 +84,7 @@
         
         .title {
             font-size: 14px;
-            color: #00d9ff;
+            color: #64748b;
             margin-bottom: 30px;
             font-weight: 500;
             text-transform: uppercase;
@@ -103,7 +103,7 @@
             align-items: center;
             justify-content: center;
             gap: 12px;
-            color: #e0e7ff;
+            color: #475569;
             text-decoration: none;
             font-size: 15px;
             transition: all 0.3s ease;
@@ -113,15 +113,15 @@
         }
         
         .contact-item:hover {
-            color: #00d9ff;
-            border: 1px solid rgba(0, 217, 255, 0.5);
-            background: rgba(0, 217, 255, 0.1);
+            color: #1e40af;
+            border: 1px solid rgba(30, 64, 175, 0.2);
+            background: rgba(30, 64, 175, 0.05);
             transform: translateX(5px);
         }
         
         .contact-item i {
             width: 20px;
-            color: #00d9ff;
+            color: #3b82f6;
             font-size: 16px;
         }
         
@@ -139,25 +139,25 @@
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            background: rgba(0, 217, 255, 0.1);
-            color: #00d9ff;
+            background: #f1f5f9;
+            color: #475569;
             text-decoration: none;
             transition: all 0.3s ease;
             font-size: 18px;
-            border: 1px solid rgba(0, 217, 255, 0.3);
+            border: 1px solid #e2e8f0;
         }
         
         .social-btn:hover {
-            background: #00d9ff;
-            color: #0a1929;
+            background: #3b82f6;
+            color: #ffffff;
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 217, 255, 0.4);
-            border: 1px solid #00d9ff;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+            border: 1px solid #3b82f6;
         }
         
         .divider {
             height: 1px;
-            background: linear-gradient(90deg, transparent, #00d9ff, transparent);
+            background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
             margin: 25px 0;
         }
         
@@ -165,10 +165,10 @@
             display: inline-block;
             margin-top: 15px;
             padding: 10px 20px;
-            background: rgba(0, 217, 255, 0.15);
-            border: 1px solid #00d9ff;
+            background: #3b82f6;
+            border: 1px solid #3b82f6;
             border-radius: 8px;
-            color: #00d9ff;
+            color: #ffffff;
             text-decoration: none;
             font-size: 13px;
             font-weight: 600;
@@ -178,9 +178,9 @@
         }
         
         .website-link:hover {
-            background: #00d9ff;
-            color: #0a1929;
-            box-shadow: 0 0 20px rgba(0, 217, 255, 0.6);
+            background: #2563eb;
+            border: 1px solid #2563eb;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
         }
         
         @media (max-width: 480px) {
